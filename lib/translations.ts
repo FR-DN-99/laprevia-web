@@ -120,7 +120,7 @@ export const translations = {
     },
     // Contact Section
     contact: {
-      title: "MANTENTE CONECTADO",
+      title: "CONECTA CON LA PREVIA",
       subtitle: "Síguenos en redes sociales para estar al día con nuestros próximos eventos en Tenerife",
       collaborateTitle: "¿Quieres Colaborar?",
       collaborateText: "Si eres DJ, promotor, o tienes una propuesta para nosotros, nos encantaría saber de ti.",
@@ -261,7 +261,7 @@ export const translations = {
     },
     // Contact Section
     contact: {
-      title: "STAY CONNECTED",
+      title: "CONNECT WIHT US",
       subtitle: "Follow us on social media to stay up to date with our upcoming events in Tenerife",
       collaborateTitle: "Want to Collaborate?",
       collaborateText: "If you are a DJ, promoter, or have a proposal for us, we would love to hear from you.",

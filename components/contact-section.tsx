@@ -1,77 +1,120 @@
-"use client"
+'use client';
 
-import { Card } from "@/components/ui/card"
-import { Instagram, Facebook, Mail, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/lib/language-context"
-import { getTranslation } from "@/lib/translations"
+import { Card } from '@/components/ui/card';
+import { Instagram, Facebook, Mail, MapPin, Youtube } from 'lucide-react';
+import { SiSoundcloud, SiTiktok } from 'react-icons/si';
+import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/lib/language-context';
+import { getTranslation } from '@/lib/translations';
 
 const socialLinks = [
-  { icon: Instagram, label: "Instagram", href: "#", username: "@lapreviagroup" },
-  { icon: Facebook, label: "Facebook", href: "#", username: "La Previa Group" },
-]
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    href: 'https://www.facebook.com/share/1ByvabB5Pn/?mibextid=wwXIfr',
+    username: 'La Previa Group',
+  },
+  {
+    icon: Youtube,
+    label: 'YouTube',
+    href: 'https://youtube.com/@lapreviagroup?si=KLV5n8hq_9hZM8zm',
+    username: 'LaPreviaGroup',
+  },
+  {
+    icon: SiSoundcloud,
+    label: 'SoundCloud',
+    href: 'https://on.soundcloud.com/Iy4lena1vhjFmSbRTn',
+    username: 'LaPreviaGroup',
+  },
+  {
+    icon: SiTiktok,
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@lapreviagroup?_r=1&_t=ZN-92Di1HBdHkM',
+    username: '@lapreviagroup',
+  },
+  {
+    icon: Instagram,
+    label: 'Instagram',
+    href: 'https://www.instagram.com/lapreviagroup',
+    username: '@lapreviagroup',
+  },
+];
 
 export function ContactSection() {
-  const { language } = useLanguage()
-  const t = getTranslation(language)
+  const { language } = useLanguage();
+  const t = getTranslation(language);
 
   return (
-    <section id="contacto" className="py-24 md:py-32">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6 text-balance">
+    <section id='contacto' className='py-24 md:py-32'>
+      <div className='container mx-auto px-4'>
+        <div className='max-w-4xl mx-auto'>
+          <div className='text-center mb-16'>
+            <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-6 text-balance'>
               {t.contact.title}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground text-balance leading-relaxed">
+            <p className='text-lg md:text-xl text-muted-foreground text-balance leading-relaxed'>
               {t.contact.subtitle}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className='grid md:grid-cols-2 gap-8 mb-12'>
             {socialLinks.map((social, index) => {
-              const Icon = social.icon
+              const Icon = social.icon;
+              const isLast = index === socialLinks.length - 1;
               return (
                 <Card
                   key={index}
-                  className="p-8 bg-card border-border hover:border-primary transition-all group cursor-pointer"
+                  className={`p-8 bg-card border-border hover:border-primary transition-all group cursor-pointer ${
+                    isLast ? 'md:col-span-2 flex justify-center' : ''
+                  }`}
                 >
-                  <a href={social.href} className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                      <Icon className="h-8 w-8 text-primary" />
+                  <a
+                    href={social.href}
+                    className={`flex items-center gap-4 ${isLast ? 'justify-center' : ''}`}
+                  >
+                    <div className='w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors'>
+                      <Icon className='h-8 w-8 text-primary' />
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-card-foreground mb-1">{social.label}</div>
-                      <div className="text-muted-foreground">{social.username}</div>
+                      <div className='text-xl font-bold text-card-foreground mb-1'>
+                        {social.label}
+                      </div>
+                      <div className='text-muted-foreground'>
+                        {social.username}
+                      </div>
                     </div>
                   </a>
                 </Card>
-              )
+              );
             })}
           </div>
 
-          <Card className="p-8 md:p-12 bg-card border-border text-center space-y-6">
-            <div className="w-16 h-16 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
-              <Mail className="h-8 w-8 text-primary" />
+          <Card className='p-8 md:p-12 bg-card border-border text-center space-y-6'>
+            <div className='w-16 h-16 mx-auto rounded-full bg-primary/20 flex items-center justify-center'>
+              <Mail className='h-8 w-8 text-primary' />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-card-foreground mb-2">{t.contact.collaborateTitle}</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">{t.contact.collaborateText}</p>
-              <Button size="lg" className="gap-2">
-                <Mail className="h-5 w-5" />
+              <h3 className='text-2xl font-bold text-card-foreground mb-2'>
+                {t.contact.collaborateTitle}
+              </h3>
+              <p className='text-muted-foreground leading-relaxed mb-6'>
+                {t.contact.collaborateText}
+              </p>
+              <Button size='lg' className='gap-2'>
+                <Mail className='h-5 w-5' />
                 {t.contact.contactButton}
               </Button>
             </div>
           </Card>
 
-          <div className="mt-12 text-center">
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <MapPin className="h-5 w-5" />
+          <div className='mt-12 text-center'>
+            <div className='flex items-center justify-center gap-2 text-muted-foreground'>
+              <MapPin className='h-5 w-5' />
               <p>{t.contact.location}</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

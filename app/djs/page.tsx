@@ -4,18 +4,54 @@ import { Footer } from '@/components/footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Instagram, Music2, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title:
     'DJs - La Previa Group | Artistas de Drum and Bass y Techno en Tenerife',
   description:
-    'Conoce a los DJs residentes y artistas invitados de La Previa Group. Los mejores artistas de drum and bass y techno que tocan en las fiestas de Tenerife.',
+    'Conoce a los DJs residentes y artistas invitados de La Previa Group. Los mejores artistas de drum and bass y techno que tocan en las fiestas de Tenerife. Discover our resident and guest DJs performing Drum and Bass and Techno in Tenerife.',
   keywords:
-    'djs tenerife, drum and bass dj, techno dj tenerife, djs canarias, electronic music artists, dj residentes tenerife',
+    'djs Tenerife, drum and bass DJ, techno DJ Tenerife, DJs Canarias, electronic music artists, DJs residentes Tenerife, Drum and Bass Tenerife, Techno Tenerife, parties Tenerife, La Previa Group',
   openGraph: {
     title: 'DJs - La Previa Group Tenerife',
-    description: 'Los mejores DJs de drum and bass y techno en Tenerife',
+    description:
+      'Los mejores DJs de drum and bass y techno en Tenerife. The best Drum and Bass and Techno DJs in Tenerife.',
     type: 'website',
+    locale: 'es_ES',
+    alternateLocale: 'en_US',
+    images: [
+      {
+        url: '/images/djs-event-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'DJs Drum and Bass y Techno Tenerife',
+      },
+    ],
+  },
+  alternates: {
+    languages: {
+      es: '/djs?lang=es',
+      en: '/djs?lang=en',
+    },
+  },
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
   },
 };
 
@@ -28,6 +64,7 @@ const djs = [
     genres: ['Drum and Bass', 'Jungle', 'Neurofunk'],
     instagram: 'https://instagram.com/dendivell',
     soundcloud: 'https://soundcloud.com',
+    profileLink: '/djs/resident-1',
   },
   {
     name: 'Yayo Boys',
@@ -37,6 +74,7 @@ const djs = [
     genres: ['Techno'],
     instagram: 'https://instagram.com/yayoboys',
     soundcloud: 'https://soundcloud.com',
+    profileLink: '/djs/resident-2',
   },
 ];
 
@@ -108,10 +146,17 @@ export default function DJsPage() {
                     </div>
 
                     <div className='flex gap-2 pt-2'>
+                      {dj.profileLink && (
+                        <Button size='sm' className='flex-1' asChild>
+                          <Link href={dj.profileLink}>Ver Perfil</Link>
+                        </Button>
+                      )}
                       <Button
                         size='sm'
                         variant='outline'
-                        className='flex-1 bg-transparent'
+                        className={
+                          dj.profileLink ? 'flex-1' : 'flex-1 bg-transparent'
+                        }
                         asChild
                       >
                         <a
@@ -123,21 +168,23 @@ export default function DJsPage() {
                           Instagram
                         </a>
                       </Button>
-                      <Button
-                        size='sm'
-                        variant='outline'
-                        className='flex-1 bg-transparent'
-                        asChild
-                      >
-                        <a
-                          href={dj.soundcloud}
-                          target='_blank'
-                          rel='noopener noreferrer'
+                      {!dj.profileLink && (
+                        <Button
+                          size='sm'
+                          variant='outline'
+                          className='flex-1 bg-transparent'
+                          asChild
                         >
-                          <Music2 className='h-4 w-4 mr-2' />
-                          Music
-                        </a>
-                      </Button>
+                          <a
+                            href={dj.soundcloud}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <Music2 className='h-4 w-4 mr-2' />
+                            Music
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </Card>

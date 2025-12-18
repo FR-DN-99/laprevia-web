@@ -10,8 +10,9 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.05 0 0);
   --popover-foreground: oklch(0.98 0 0);
+  /* Updated primary color to new neutral color */
   --primary: oklch(80.152% 0.00009 271.152);
-  --primary-foreground: oklch(0.98 0 0);
+  --primary-foreground: oklch(0.05 0 0);
   --secondary: oklch(0.15 0 0);
   --secondary-foreground: oklch(0.98 0 0);
   --muted: oklch(0.2 0 0);
@@ -22,7 +23,9 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.25 0 0);
   --input: oklch(0.2 0 0);
+  /* Updated ring color to match new primary */
   --ring: oklch(80.152% 0.00009 271.152);
+  /* Updated chart-1 to match new primary */
   --chart-1: oklch(80.152% 0.00009 271.152);
   --chart-2: oklch(0.6 0.22 170);
   --chart-3: oklch(0.7 0.2 40);
@@ -39,6 +42,22 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* Green theme for 1515 / Drum and Bass */
+.theme-green {
+  --primary: oklch(0.81,0.19,157);
+  --ring: oklch(0.81, 0.19, 157);
+  --accent: oklch(0.81, 0.19, 157);
+  --chart-1: oklch(0.81, 0.19, 157);
+}
+
+/* Orange theme for Not Found / Techno */
+.theme-orange {
+  --primary: oklch(0.67,0.22,37);
+  --ring: oklch(0.67, 0.22, 37);
+  --accent: oklch(0.67, 0.22, 37);
+  --chart-1: oklch(0.67, 0.22, 37);
+}
+
 .dark {
   --background: oklch(0.05 0 0);
   --foreground: oklch(0.98 0 0);
@@ -46,6 +65,7 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.1 0 0);
   --popover-foreground: oklch(0.98 0 0);
+  /* Updated dark mode primary to match light mode neutral color */
   --primary: oklch(80.152% 0.00009 271.152);
   --primary-foreground: oklch(0.05 0 0);
   --secondary: oklch(0.2 0 0);
@@ -58,6 +78,7 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.2 0 0);
   --input: oklch(0.15 0 0);
+  /* Updated dark mode ring to match new primary */
   --ring: oklch(80.152% 0.00009 271.152);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
@@ -67,6 +88,22 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* Green theme dark mode */
+.dark.theme-green {
+  --primary: oklch(0.7 0.2 145);
+  --ring: oklch(0.7 0.2 145);
+  --accent: oklch(0.75 0.18 150);
+  --chart-1: oklch(0.7 0.2 145);
+}
+
+/* Orange theme dark mode */
+.dark.theme-orange {
+  --primary: oklch(0.75 0.2 50);
+  --ring: oklch(0.75 0.2 50);
+  --accent: oklch(0.8 0.18 45);
+  --chart-1: oklch(0.75 0.2 50);
 }
 
 @theme inline {
@@ -113,6 +150,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

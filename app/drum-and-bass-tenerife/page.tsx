@@ -7,17 +7,50 @@ import { Calendar, MapPin, Music2, Radio, Users } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title:
-    '1515 - Drum and Bass Tenerife | La Previa Group | Fiesta DNB Tenerife',
+  title: 'Drum and Bass Tenerife | La Previa Group | DnB Night Tenerife',
   description:
-    '1515 es la mejor fiesta de Drum and Bass en Tenerife. DJs internacionales, sistema de sonido premium y ambiente underground. La referencia del DNB en Tenerife por La Previa Group.',
+    'La mejor noche de Drum and Bass en Tenerife con DJs locales e internacionales, sesiones marathon y producciones visuales inmersivas. The best Drum and Bass night in Tenerife with marathon DJ sessions and immersive visuals.',
   keywords:
-    'drum and bass tenerife, dnb tenerife, 1515 tenerife, fiesta drum and bass, drum and bass party tenerife, jungle tenerife, fiesta dnb, electronic music tenerife',
+    'drum and bass Tenerife, dnb Tenerife, fiesta drum and bass Tenerife, música electrónica Tenerife, eventos Tenerife, party Tenerife, DnB Tenerife, underground drum and bass, electronic music Tenerife, Tenerife nightlife, Tenerife clubs',
   openGraph: {
-    title: '1515 - Drum and Bass Tenerife | La Previa Group',
+    title: 'Drum and Bass Tenerife | La Previa Group',
     description:
-      'La mejor fiesta de Drum and Bass en Tenerife con DJs internacionales y sonido premium',
+      'La mejor noche de Drum and Bass en Tenerife con DJs locales e internacionales. The best Drum and Bass night in Tenerife with marathon DJ sessions and immersive visuals.',
     type: 'website',
+    locale: 'es_ES',
+    alternateLocale: 'en_US',
+    images: [
+      {
+        url: '/images/dnb-event-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Drum and Bass Tenerife',
+      },
+    ],
+  },
+  alternates: {
+    languages: {
+      es: '/drum-and-bass-tenerife?lang=es',
+      en: '/drum-and-bass-tenerife?lang=en',
+    },
+  },
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
   },
 };
 
@@ -44,7 +77,7 @@ export default function DrumAndBassPage() {
               </span>
             </div>
             <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-balance'>
-              1515
+              15 15
             </h1>
             <p className='text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 text-balance leading-relaxed'>
               La fiesta de Drum and Bass más intensa de Tenerife

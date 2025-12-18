@@ -1,23 +1,63 @@
 import type { Metadata } from 'next';
+import { technoMetadata } from '@/lib/metadata/notfound';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Calendar, MapPin, Clock, Eye, Waves } from 'lucide-react';
 import Link from 'next/link';
+import { type Language } from '@/lib/translations';
+
+interface Props {
+  params: { lang: Language };
+}
 
 export const metadata: Metadata = {
   title:
-    'Not Found - Techno Tenerife | La Previa Group | Fiesta Techno Tenerife',
+    'NOT FOUND - Techno Tenerife | La Previa Group | Techno Night Tenerife',
   description:
-    'Not Found es la mejor fiesta de Techno en Tenerife. Sesiones marathon, producciones visuales y los mejores DJs de techno. La referencia del techno en Tenerife por La Previa Group.',
+    'Not Found es la noche de techno que estabas buscando en Tenerife. Desde techno industrial hasta melodic techno, ofrecemos sesiones marathon con los mejores DJs y producciones visuales hipnóticas. The best techno night in Tenerife with marathon DJ sessions and hypnotic visuals.',
   keywords:
-    'techno tenerife, fiesta techno tenerife, not found tenerife, techno party tenerife, melodic techno tenerife, industrial techno, electronic music tenerife, underground techno',
+    'techno Tenerife, fiesta techno Tenerife, Not Found Tenerife, melodic techno Tenerife, industrial techno Tenerife, música electrónica Tenerife, underground techno, techno night Tenerife, techno party Tenerife, electronic music Tenerife',
   openGraph: {
-    title: 'Not Found - Techno Tenerife | La Previa Group',
+    title: 'NOT FOUND - Techno Tenerife | La Previa Group',
     description:
-      'Las mejores noches de techno en Tenerife con sesiones marathon y producciones visuales hipnóticas',
+      'Las mejores noches de techno en Tenerife con sesiones marathon y producciones visuales hipnóticas. The best techno nights in Tenerife with marathon DJ sessions and immersive visual productions.',
     type: 'website',
+    locale: 'es_ES',
+    alternateLocale: 'en_US',
+    images: [
+      {
+        url: '/images/techno-event-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Not Found Techno Tenerife',
+      },
+    ],
+  },
+  alternates: {
+    languages: {
+      es: '/techno-tenerife?lang=es',
+      en: '/techno-tenerife?lang=en',
+    },
+  },
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
   },
 };
 
@@ -59,7 +99,6 @@ export default function TechnoPage() {
             </div>
           </div>
         </section>
-
         {/* Description Section */}
         <section className='py-24 md:py-32'>
           <div className='container mx-auto px-4'>
@@ -69,30 +108,31 @@ export default function TechnoPage() {
               </h2>
               <div className='prose prose-lg prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed'>
                 <p>
-                  <strong className='text-foreground'>Not Found</strong> es la
-                  respuesta a tu búsqueda del mejor techno en Tenerife.
-                  Inspirados en los grandes clubs underground de Europa, traemos
-                  sesiones marathon con los mejores DJs de techno industrial,
-                  melodic techno y todas las variantes del género.
+                  <strong className='text-foreground'>NOT FOUND</strong> es una
+                  experiencia nocturna dedicada a los amantes del{' '}
+                  <strong>techno</strong> en <strong>Tenerife</strong>, diseñada
+                  para quienes buscan sonidos <strong>intensos</strong> y{' '}
+                  <strong>envolventes</strong> que transforman cada noche en un{' '}
+                  <strong>viaje único</strong>. Con un enfoque claro en la
+                  esencia del <strong>techno underground</strong>, reúne a DJs{' '}
+                  <strong>nacionales e internacionales</strong> que ofrecen sets
+                  cargados de <strong>energía</strong>, <strong>ritmo</strong> y{' '}
+                  <strong>atmósferas hipnóticas</strong>.
                 </p>
                 <p>
-                  Cada noche de Not Found es un viaje hipnótico a través del
-                  techno más puro. Con producciones visuales inmersivas y
-                  sistemas de sonido diseñados para sentir cada kick, creamos
-                  experiencias que van más allá de una simple fiesta de techno
-                  en Tenerife.
-                </p>
-                <p>
-                  Desde el primer beat hasta las primeras luces del amanecer,
-                  Not Found te lleva a un estado de trance colectivo donde la
-                  música techno se convierte en una experiencia transformadora.
-                  Únete a la mejor escena de techno en Tenerife.
+                  Cada edición de <strong>Not Found</strong> va más allá de una
+                  simple <strong>fiesta de techno en Tenerife</strong>: es una{' '}
+                  <strong>inmersión total</strong> en la{' '}
+                  <strong>cultura club</strong>, donde la{' '}
+                  <strong>música</strong>, el <strong>sonido</strong> y el{' '}
+                  <strong>ambiente</strong> se fusionan para crear una
+                  experiencia <strong>auténtica</strong> e{' '}
+                  <strong>inolvidable</strong>.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-24 bg-muted/30'>
           <div className='container mx-auto px-4'>
@@ -170,7 +210,7 @@ export default function TechnoPage() {
                   </div>
                   <div className='w-full md:w-64 h-64 relative rounded-lg overflow-hidden'>
                     <img
-                      src='/techno-party-lights-tenerife-underground.jpg'
+                      src='/notfound-proximamente.jpeg'
                       alt='Next Not Found techno event in Tenerife'
                       className='w-full h-full object-cover'
                     />

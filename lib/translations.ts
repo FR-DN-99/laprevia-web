@@ -8,22 +8,24 @@ export const translations = {
       dnb: "1515 - D&B",
       techno: "Not Found",
       djs: "DJs",
-      events: "Eventos",
-      about: "Nosotros",
+      events: "Rewind",
+      about: "Quienes Somos",
+      contact: "Contacto",
     },
     // Hero Section
     hero: {
       title: "LOS MEJORES EVENTOS DE",
       titleHighlight: "TENERIFE",
       subtitle:
-        "Drum and Bass, Techno y música electrónica. La Previa Group trae la mejor escena underground a la isla.",
+        "Drum and Bass, Techno y música electrónica. La Previa Group trae la mejor escena underground a la isla, creando experiencias únicas para amantes de la música electrónica.",
       ctaEvents: "Ver Próximos Eventos",
       ctaLearnMore: "Conocer Más",
     },
     // Events Section
     events: {
       title: "NUESTROS EVENTOS",
-      subtitle: "La Previa Group organiza las mejores fiestas de música electrónica en Tenerife durante todo el año",
+      subtitle:
+        "La Previa Group organiza las mejores fiestas de música electrónica en Tenerife durante todo el año, incluyendo eventos de techno y drum and bass, con artistas locales e internacionales.",
     },
     // 1515 Page (Drum and Bass)
     dnbPage: {
@@ -141,6 +143,47 @@ export const translations = {
       copyright: "Todos los derechos reservados.",
       keywords: "Fiestas en Tenerife | Drum and Bass Tenerife | Techno Tenerife | Eventos de Música Electrónica",
     },
+    // Resident DJs Page
+    residentDJs: {
+      photos: "Galería de Fotos",
+      videos: "Videos",
+      recentEvents: "Últimos Eventos",
+      soundcloud: "Sesiones en SoundCloud",
+      socials: "Redes Sociales",
+      followOn: "Sígueme en",
+      listenOn: "Escucha en",
+      backToDJs: "Volver a DJs",
+      bio: "Biografía",
+      genres: "Géneros",
+      resident: "DJ Residente",
+    },
+    // Contact Page
+    contactPage: {
+      title: "CONTACTO",
+      subtitle: "Para bookings, colaboraciones o información, utiliza el formulario o escríbenos directamente",
+      formTitle: "Envíanos un Mensaje",
+      formName: "Nombre",
+      formNamePlaceholder: "Tu nombre",
+      formEmail: "Email",
+      formEmailPlaceholder: "tu@email.com",
+      formSubject: "Motivo",
+      formSubjectBooking: "Booking",
+      formSubjectCollaboration: "Colaboración",
+      formSubjectPress: "Prensa",
+      formSubjectOther: "Otro",
+      formSubjectPlaceholder: "Asunto...",
+      formMessage: "Mensaje",
+      formMessagePlaceholder: "Cuéntanos sobre tu consulta...",
+      formSubmit: "Enviar Mensaje",
+      formError: "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      formSending: "Enviando mensaje...",
+      formSuccess: "Mensaje enviado correctamente. Te responderemos pronto.",
+      infoTitle: "Información de Contacto",
+      infoDescription: "También puedes contactarnos directamente a través de:",
+      email: "Email",
+      followUs: "Síguenos",
+      presskit: "Descargar Press Kit",
+    },
   },
   en: {
     // Navigation
@@ -149,22 +192,24 @@ export const translations = {
       dnb: "1515 - D&B",
       techno: "Not Found",
       djs: "DJs",
-      events: "Events",
-      about: "About",
+      events: "Rewind",
+      about: "About Us",
+      contact: "Contact",
     },
     // Hero Section
     hero: {
       title: "THE BEST EVENTS IN",
       titleHighlight: "TENERIFE",
       subtitle:
-        "Drum and Bass, Techno and electronic music. La Previa Group brings the best underground scene to the island.",
-      ctaEvents: "View Upcoming Events",
+        "Drum and Bass, Techno, and electronic music. La Previa Group brings the best underground scene to the island, creating unique experiences for electronic music lovers.",
+      ctaEvents: "See Upcoming Events",
       ctaLearnMore: "Learn More",
     },
     // Events Section
     events: {
       title: "OUR EVENTS",
-      subtitle: "La Previa Group organizes the best electronic music parties in Tenerife throughout the year",
+      subtitle:
+        "La Previa Group organizes the best electronic music parties in Tenerife throughout the year, including techno and drum and bass events, featuring local and international artists.",
     },
     // 1515 Page (Drum and Bass)
     dnbPage: {
@@ -281,6 +326,47 @@ export const translations = {
       link4: "Contact",
       copyright: "All rights reserved.",
       keywords: "Parties in Tenerife | Drum and Bass Tenerife | Techno Tenerife | Electronic Music Events",
+    },
+    // Resident DJs Page
+    residentDJs: {
+      photos: "Photo Gallery",
+      videos: "Videos",
+      recentEvents: "Recent Events",
+      soundcloud: "SoundCloud Sessions",
+      socials: "Social Media",
+      followOn: "Follow me on",
+      listenOn: "Listen on",
+      backToDJs: "Back to DJs",
+      bio: "Biography",
+      genres: "Genres",
+      resident: "Resident DJ",
+    },
+    // Contact Page
+    contactPage: {
+      title: "CONTACT",
+      subtitle: "For bookings, collaborations or information, use the form or write to us directly",
+      formTitle: "Send Us a Message",
+      formName: "Name",
+      formNamePlaceholder: "Your name",
+      formEmail: "Email",
+      formEmailPlaceholder: "your@email.com",
+      formSubject: "Subject",
+      formSubjectBooking: "Booking",
+      formSubjectCollaboration: "Collaboration",
+      formSubjectPress: "Press",
+      formSubjectOther: "Other",
+      formSubjectPlaceholder: "Your subject",
+      formMessage: "Message",
+      formMessagePlaceholder: "Tell us about your inquiry...",
+      formSubmit: "Send Message",
+      formSending: "Sending message...",
+      formSuccess: "Message sent successfully. We will get back to you soon.",
+      formError: "The message could not be sent. Please try again.",
+      infoTitle: "Contact Information",
+      infoDescription: "You can also contact us directly through:",
+      email: "Email",
+      followUs: "Follow Us",
+      presskit: "Download Press Kit",
     },
   },
 }
